@@ -383,30 +383,42 @@ a:hover { color: var(--clr-accent-hover); }
 .card h3 { font-size: 1.05rem; color: var(--clr-text); margin-bottom: 8px; }
 .card p { font-size: 0.9rem; }
 
-/* -- Campaign Block -- */
-.campaign-block {
-  max-width: 700px;
-  margin: 0 auto;
+/* -- Campaign Section -- */
+.campaign-section {
   text-align: center;
-  padding: 48px 0;
 }
 
-.campaign-quote {
-  font-family: var(--font-display);
-  font-size: clamp(1.4rem, 3vw, 2rem);
-  font-style: italic;
+.campaign-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  margin-bottom: 60px;
+  text-align: left;
+}
+
+.campaign-card {
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  padding: 40px 36px;
+  border: 1px solid var(--clr-border);
+  box-shadow: 0 2px 16px var(--clr-card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.campaign-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px var(--clr-card-shadow-hover);
+}
+
+.campaign-card h3 {
+  font-size: 1.1rem;
   color: var(--clr-text);
-  line-height: 1.5;
-  margin-bottom: 40px;
-  padding: 0 24px;
+  margin-bottom: 12px;
 }
 
-.campaign-text {
-  font-size: 1.05rem;
-  color: var(--clr-text-soft);
-  max-width: 560px;
-  margin: 0 auto 20px;
-  line-height: 1.85;
+.campaign-card p {
+  font-size: 0.92rem;
+  line-height: 1.8;
 }
 
 /* -- Profile Cards -- */
@@ -955,7 +967,8 @@ a:hover { color: var(--clr-accent-hover); }
   .card { padding: 24px 20px; }
   .for-whom-card { padding: 28px 24px; }
   .profile-card { padding: 28px 20px; }
-  .campaign-block { padding: 32px 0; }
+  .campaign-grid { gap: 20px; }
+  .campaign-card { padding: 28px 24px; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; text-align: center; }
 }
