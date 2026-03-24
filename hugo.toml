@@ -1,0 +1,10 @@
+baseURL = "https://sisy.rest/"
+languageCode = "en-us"
+title = "SISY Rest - Rest is Not the Opposite of Ambition"
+
+[params]
+  description = "SISY Rest connects burnout researchers, somatic therapists, sleep scientists, and rest advocates with the stages and audiences they deserve."
+  tagline = "Rest is not the opposite of ambition."
+
+[markup.goldmark.renderer]
+  unsafe = true
